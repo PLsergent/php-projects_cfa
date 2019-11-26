@@ -3,6 +3,7 @@
 require_once("./templates/v_header.php");
 ?>
 
+<form action="../index.php" method="post">
 <div class="row">
     <div class="col-9">
         <div class="row mb-4">
@@ -14,7 +15,7 @@ require_once("./templates/v_header.php");
                         <div class="card-body py-1">
                             <div class="form-group row" style="margin-bottom: 0px">
                                 <label for="choose_user" class="col-6 col-form-label"><? echo $monday ?></label>
-                                <select class="form-control col-6 choose_user">
+                                <select name="<? echo $monday ?>" class="form-control col-6 choose_user">
                                     <?
                                     shuffle($users);
                                     foreach ($users as $user) {
@@ -34,16 +35,23 @@ require_once("./templates/v_header.php");
             ?>
         </div>
     </div>
+
     <div class="col-3">
-        <h3 class="display-6">Statistiques:</h3>
-            <ol>
-                <li></li>
-            </ol>
+        <h3 class="display-6 mb-4">Statistiques:</h3>
+        <ul class="list-group list-group-flush">
+            <?
+            foreach($occ_users as $name => $occ) {
+                ?>
+                <li class="list-group-item bg-<? echo $name ?>"><? echo $name ?> : <? echo $occ ?></li>
+                <?
+            }
+            ?>
+        </ul>
     </div>
 </div>
 
 <button class="btn btn-lg btn-block btn-info" type="submit">Valider planning</button>
-
+</form>
 
 <?php
 
