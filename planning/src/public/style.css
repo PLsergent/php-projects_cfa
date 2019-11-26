@@ -1,0 +1,24 @@
+.bg-Vincent {
+    background-color: #7ACFF9 !important;
+}
+
+.bg-Christophe {
+    background-color: #FFAD66 !important;
+}
+
+.bg-Thomas {
+    background-color: #66C9D1 !important;
+}
+
+.bg-David {
+    background-color: #FBE58B !important;
+}
+
+.bg-Personne {
+    background-color: #FFF !important;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}

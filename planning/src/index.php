@@ -1,20 +1,20 @@
 <?php
 
-echo"<h1>Welcome to planning!</h1>";
+require_once("./connexion.php");
 
-try {
+// get mondays
+$mondays = array();
 
-    $mng = new MongoDB\Driver\Manager("mongodb://mongodb:27019");
-    var_dump($mng);
+$date = $date = new DateTime('2019-01 monday');
+$thisYear = $date->format('y');
 
-} catch (MongoDB\Driver\Exception\Exception $e) {
-
-    $filename = basename(__FILE__);
-    
-    echo "The $filename script has experienced an error.\n"; 
-    echo "It failed with the following exception:\n";
-    
-    echo "Exception:", $e->getMessage(), "\n";
-    echo "In file:", $e->getFile(), "\n";
-    echo "On line:", $e->getLine(), "\n";       
+while($date->format('y') === $thisYear) {
+    array_push($mondays , $date->format("d-m-y"));
+    $date->modify("next Monday");
 }
+
+// get users
+$query = new MongoDB\Driver\Query([]);
+$users = $mng->executeQuery("planning.users", $query)->toArray();
+
+require_once("./templates/v_calendar.php");
