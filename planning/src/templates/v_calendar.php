@@ -17,14 +17,30 @@ require_once("./templates/v_header.php");
                                 <label for="choose_user" class="col-6 col-form-label"><? echo $monday ?></label>
                                 <select name="<? echo $monday ?>" class="form-control col-6 choose_user">
                                     <?
+                                    // Get user assign to this monday
+                                    $query = new MongoDB\Driver\Query(["assign" => $monday]);
+                                    $result = $mng->executeQuery("planning.assignments", $query)->toArray();
+                                    $query_user = new MongoDB\Driver\Query(["_id" => new \MongoDB\BSON\ObjectId($result[0]->user_id)]);
+                                    $user = $mng->executeQuery("planning.users", $query_user)->toArray();
+
+                                    // Shuffle if no result
                                     shuffle($users);
+
+                                    if (!empty($user[0]->name)) {
+                                        sort($users);
+                                        foreach($users as $k => $u) {
+                                            if ($user[0]->name == $u->name) {
+                                                array_splice($users, $k, 1);
+                                                array_unshift($users, $u);
+                                            }
+                                        }
+                                    }                            
                                     foreach ($users as $user) {
                                         ?>
                                         <option class="bg-<? echo $user->name ?>" value="<? echo $user->name ?>"><? echo $user->name ?></option>
                                         <?
                                     }
                                     ?>
-                                    <option class="bg-Personne" value="Personne">Personne</option>
                                 </select>
                             </div>
                         </div>
