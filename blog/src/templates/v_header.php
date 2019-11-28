@@ -14,10 +14,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../public/index.js"></script>
 
-    <title>Planning</title>
+    <title>Blog</title>
   </head>
 
-  <body class="container mt-5" style="max-width: 1500px">
+  <body class="container mt-4" style="max-width: 1200px">
 
-    <h1 class="display-4" style="font-size: 48px">Planning des corvées d'épluchage</h1>
+    <h1 class="display-4" style="font-size: 48px">Blog</h1>
     <h3 class="lead mb-4">by Sergent Pierre-Louis</h3>
