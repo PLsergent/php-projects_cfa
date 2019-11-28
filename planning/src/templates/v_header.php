@@ -19,4 +19,5 @@
 
   <body class="container mt-5" style="max-width: 1500px">
 
-    <h1 class="display-4 mb-4" style="font-size: 48px">Planning des corvées d'épluchage</h1>
+    <h1 class="display-4" style="font-size: 48px">Planning des corvées d'épluchage</h1>
+    <h3 class="lead mb-4">Sergent Pierre-Louis</h3>

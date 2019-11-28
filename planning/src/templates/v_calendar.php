@@ -25,8 +25,10 @@ require_once("./templates/v_header.php");
 
                                     // Shuffle if no result
                                     shuffle($users);
-
-                                    if (!empty($user[0]->name)) {
+                                    
+                                    // else put the user on index 0 of $users Array
+                                    if(!empty($user[0]->name)) {
+                                        echo"oui";
                                         sort($users);
                                         foreach($users as $k => $u) {
                                             if ($user[0]->name == $u->name) {
@@ -35,7 +37,7 @@ require_once("./templates/v_header.php");
                                             }
                                         }
                                     }                            
-                                    foreach ($users as $user) {
+                                    foreach($users as $user) {
                                         ?>
                                         <option class="bg-<? echo $user->name ?>" value="<? echo $user->name ?>"><? echo $user->name ?></option>
                                         <?
@@ -52,6 +54,8 @@ require_once("./templates/v_header.php");
         </div>
     </div>
 
+<? // ======================== Statistics ======================== ?>
+
     <div class="col-3">
         <h3 class="display-6 mb-4">Statistiques:</h3>
         <ul class="list-group list-group-flush">
@@ -63,6 +67,8 @@ require_once("./templates/v_header.php");
             }
             ?>
         </ul>
+        <? // =========== Reset button ===========?>
+        <a href="./controllers/reset.php" class="mt-5 btn btn-block btn-warning">Reset</a>
     </div>
 </div>
 

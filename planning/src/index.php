@@ -1,6 +1,6 @@
 <?php
 
-require_once("./connexion.php");
+require_once("./controllers/connexion.php");
 
 // Get mondays
 $mondays = array();
