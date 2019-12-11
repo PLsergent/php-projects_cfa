@@ -3,4 +3,9 @@
 require_once("./controllers/getUsers.php");
 require_once("./controllers/getPosts.php");
 
-require_once("./templates/v_blog.php");
+if (isset($_GET['ctrl'])) {
+    $ctrl = $_GET['ctrl'];
+} else {
+    $ctrl = 'home';
+}
+require_once('./controllers/c_' . $ctrl . '.php');
