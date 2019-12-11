@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Fonctionnement du blog",
+        "date": "2019-12-11T00:00:00.000Z",
+        "user": "UseroftheBlog",
+        "content": "Premier post du blog. Vous pouvez ici ajouter des posts, répondre à ces derniers ou bien les commenter.",
+        "responses": [
+            {
+                "title": "Fonctionnement du blog - Exemple de réponse",
+                "date": "2019-12-11T00:00:00.000Z",
+                "user": "UseroftheBlog",
+                "content": "Voici un exemple de réponse!",
+                "responses": []
+            }
+        ] 
+    },
+    {
+        "title": "Fonctionnement du blog 2",
+        "date": "2019-12-11T00:00:00.000Z",
+        "user": "UseroftheBlog",
+        "content": "Second post du blog. Vous pouvez ici ajouter des posts, répondre à ces derniers ou bien les commenter.",
+        "responses": [
+            {
+                "title": "Fonctionnement du blog 2 - Exemple de réponse",
+                "date": "2019-12-11T00:00:00.000Z",
+                "user": "UseroftheBlog",
+                "content": "Voici un exemple de réponse!",
+                "responses": []
+            }
+        ] 
+    }
+]
