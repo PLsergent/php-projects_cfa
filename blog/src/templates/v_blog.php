@@ -8,6 +8,6 @@ require_once("./templates/v_header.php");
   <a href="index.php?ctrl=new_post" class="btn btn-info btn-lg mb-4">Nouveau post +</a>
 <?
 
-displayPosts(0, $posts);
+displayPosts(0, $posts, 0);
 
 require_once("./templates/v_footer.php");

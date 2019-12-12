@@ -27,7 +27,7 @@
 - First post
     - First post - responseNv1
     - First post - responseNv1:2
-        - First post - responseNv1:2 - responseNv2
-            - First post - responseNv1:2 - responseNv2 - responseNv3
+        - First post - responseNv2
+            - First post - responseNv3
             
  Limit to 3 levels.

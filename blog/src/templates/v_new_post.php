@@ -1,10 +1,10 @@
 <h1 class="display-5 mb-3" style="font-size: 30px">Nouveau post</h1>
 
-<form method="post" action="insert_post.php">
+<form method="post" action="index.php?ctrl=insert_post">
   <div class="form-group">
     <label for="user">Username</label>
     <input type="text" class="form-control" name="user" id="user" aria-describedby="user" required>
-    <small id="emailHelp" class="form-text text-muted">You can use any username or use the same as before</small>
+    <small id="userHelp" class="form-text text-muted">You can use any username or use the same as before</small>
   </div>
   <div class="form-group">
     <label for="title">Title</label>
