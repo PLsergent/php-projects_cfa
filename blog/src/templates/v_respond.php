@@ -7,11 +7,13 @@
     $title = $result[0]->title;
 ?>
 <form method="post" action="index.php?ctrl=insert_respond&id=<? echo $_GET['id'] ?>&indent=<? echo $indent ?>">
+<? if (empty($_SESSION["username"])) { ?>
   <div class="form-group">
     <label for="user">Username</label>
     <input type="text" class="form-control" name="user" id="user" aria-describedby="user" required>
     <small id="userHelp" class="form-text text-muted">You can use any username or use the same as before</small>
   </div>
+<? } ?>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" name="title" id="title" value="<? echo $title ?> - " required>

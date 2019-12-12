@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once("./controllers/getUsers.php");
 require_once("./controllers/getPosts.php");

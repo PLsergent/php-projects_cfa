@@ -26,12 +26,26 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item <? if (empty($_GET['ctrl'])) {echo "active";}?>">
+        <? if (empty($_SESSION["username"])) { ?>
+        <li class="nav-item <? if ($_GET['ctrl'] == "login") { echo "active"; } ?>">
+          <a class="nav-link" href="index.php?ctrl=login">Login</a>
+        </li>
+        <? } else { ?>
+        <li class="nav-item <? if ($_GET['ctrl'] == "login") { echo "active"; } ?>">
+          <a class="nav-link" href="index.php">Bonjour, <? echo $_SESSION["username"] ?></a>
+        </li>
+        <? } ?>
+        <li class="nav-item <? if (empty($_GET['ctrl'])) { echo "active"; } ?>">
           <a class="nav-link" href="index.php">Home </a>
         </li>
-        <li class="nav-item <? if (isset($_GET['ctrl'])) {echo "active";}?>">
+        <li class="nav-item <? if ($_GET['ctrl'] == "new_post") { echo "active"; } ?>">
           <a class="nav-link" href="index.php?ctrl=new_post">New post</a>
         </li>
+        <? if (!empty($_SESSION["username"])) { ?>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?ctrl=logout">Déconnexion</a>
+        </li>
+        <? } ?>
       </ul>
     </div>
   </nav>

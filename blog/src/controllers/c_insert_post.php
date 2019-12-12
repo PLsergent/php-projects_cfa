@@ -2,6 +2,11 @@
 
 // POST
 if (!empty($_POST)) {
+    
+    if (!empty($_SESSION["username"])) {
+        $_POST["user"] = $_SESSION["username"];
+    }
+
     $date = new DateTime('now');
     // Insert post in db
     $bulk = new MongoDB\Driver\BulkWrite;
