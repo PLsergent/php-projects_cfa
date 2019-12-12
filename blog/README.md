@@ -1,7 +1,7 @@
-## Technical spec
+## Technical specifications
 
 - Store password encrypted with sha1
-- Store data in json format
+- Store data in Json format (mongodb)
 
 ```
 [{
@@ -30,4 +30,18 @@
         - First post - responseNv2
             - First post - responseNv3
             
- Limit to 3 levels.
+Limit to 3 levels.
+
+
+## Implemented features
+
+### Users
+
+- Signup, check if username already exists
+- Login, display form username/password errors
+- Logout
+
+### Posts
+
+- Post a new article, custome username if not logged in (using $_SESSION)
+- Answer to article
