@@ -13,7 +13,7 @@ function displayPosts($lvlIndent, $posts) {
     ?>
     <div class="card mb-1" style="margin-left: <? echo $lvlIndent*60 ?>px">
         <div class="card-header">
-            <? echo $post->user ?>, <? $date = new DateTime($post->date); echo $date->format("D-d-M-Y");?>
+            <? echo $post->user ?>, <? $date = new DateTime($post->date); echo $date->format("D-d-M-Y H:i");?>
         </div>
         <div class="card-body">
             <h5 class="card-title"><? echo $post->title ?></h5>
@@ -28,6 +28,8 @@ function displayPosts($lvlIndent, $posts) {
             displayPosts(++$lvlIndent, $post->responses);
             // Decrease indentation when done
             --$lvlIndent;
+        }
+        if ($lvlIndent == 0) {
             ?> <hr> <?
         }
     }
