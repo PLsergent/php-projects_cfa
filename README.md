@@ -14,7 +14,9 @@ Clone the project.
 git clone https://github.com/PLsergent/php-projects_cfa.git
 ```
 
-Navigate either to blog or planning and then launch the app corresponding (the two apps are launched separately):
+Navigate either to blog or planning and then launch the app corresponding (the two apps are launched separately):<br>
+*You may have to use sudo.*
+
 ```
 docker-compose build
 docker-compose up
