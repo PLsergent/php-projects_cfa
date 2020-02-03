@@ -29,7 +29,7 @@ planning : http://localhost:8000
 
 **Make sure to stop the docker-compose before launching the other app.**
 
-**You may have to refresh the page using ```Ctrl+Shift+R``` to load static files.**
+**You may have to refresh the page using `Ctrl+Shift+R` to load static files.**
 
 ### Acces mongodb
 
@@ -38,7 +38,7 @@ In an other terminal:
 docker ps
 ```
 
-Spot the container_id of the container named ```mongo:lastest```.
+Spot the container_id of the container named `mongo:lastest`.
 
 Then use:
 ```
